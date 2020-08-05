@@ -61,9 +61,9 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *roficmd[] = { "rofi", "-modi", "drun", "-show", "drun", "-theme", "/usr/share/rofi/themes/Pop-Dark.rasi", "-icon-theme", "Qogir", "-show-icons", "-font", "文泉驿等宽微米黑 Italic 18", NULL };
-static const char *volup[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+10%", NULL };
-static const char *voldown[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-10%", NULL };
-static const char *volmute[] = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
+static const char *volup[] = { "/home/murphy/.config/muscript/volup.sh", NULL };
+static const char *voldown[] = { "/home/murphy/.config/muscript/voldown.sh", NULL };
+static const char *volmute[] = { "/home/murphy/.config/muscript/volmute.sh", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = roficmd } },
