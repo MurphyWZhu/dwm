@@ -74,10 +74,13 @@ static const char *roficmd[] = { "rofi", "-modi", "drun", "-show", "drun", "-the
 static const char *volup[] = { "/home/murphy/.config/muscript/volup.sh", NULL };
 static const char *voldown[] = { "/home/murphy/.config/muscript/voldown.sh", NULL };
 static const char *volmute[] = { "/home/murphy/.config/muscript/volmute.sh", NULL };
+static const char scratchpadname[] = "scratchpad";
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "50x15", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ 0,                            XF86XK_AudioLowerVolume,   spawn,          {.v = voldown } },
 	{ 0,                            XF86XK_AudioRaiseVolume,   spawn,          {.v = volup } },
 	{ 0,                            XF86XK_AudioMute,          spawn,          {.v = volmute } },
