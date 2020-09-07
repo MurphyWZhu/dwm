@@ -79,6 +79,8 @@ static const char *lightdown[] = { "/home/murphy/.config/muscript/lightdowm.sh",
 static const char *slockcmd[] = { "slock", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "50x15", NULL };
+static const char *maimfullcmd[] = { "/home/murphy/.config/muscript/maimfull.sh", NULL };
+static const char *maimcmd[] = { "/home/murphy/.config/muscript/maim.sh", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = roficmd } },
@@ -87,6 +89,8 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioLowerVolume,   spawn,          {.v = voldown } },
 	{ 0,                            XF86XK_AudioRaiseVolume,   spawn,          {.v = volup } },
 	{ 0,                            XF86XK_AudioMute,          spawn,          {.v = volmute } },
+	{ 0,                            XK_Print,  spawn,          {.v = maimfullcmd } },
+	{ MODKEY,                       XK_Print,  spawn,          {.v = maimcmd } },
 	{ MODKEY,                       XK_a,      spawn,          {.v = lightup } },
 	{ MODKEY|ShiftMask,             XK_a,      spawn,          {.v = lightdown } },
 	{ MODKEY,                       XK_c,      spawn,          {.v = slockcmd } },
