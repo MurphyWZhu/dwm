@@ -70,7 +70,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 static const char *roficmd[] = { "rofi", "-modi", "drun", "-show", "drun", "-theme", "/usr/share/rofi/themes/Pop-Dark.rasi", "-icon-theme", "Qogir", "-show-icons", "-font", "文泉驿等宽微米黑 Italic 18", NULL };
 static const char *volup[] = { "/home/murphy/.config/muscript/volup.sh", NULL };
 static const char *voldown[] = { "/home/murphy/.config/muscript/voldown.sh", NULL };
@@ -79,7 +79,7 @@ static const char *lightup[] = { "/home/murphy/.config/muscript/lightup.sh", NUL
 static const char *lightdown[] = { "/home/murphy/.config/muscript/lightdowm.sh", NULL };
 static const char *slockcmd[] = { "slock", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "50x15", NULL };
+static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "-d", "50", "15", NULL };
 static const char *maimfullcmd[] = { "/home/murphy/.config/muscript/maimfull.sh", NULL };
 static const char *maimcmd[] = { "/home/murphy/.config/muscript/maim.sh", NULL };
 static Key keys[] = {
