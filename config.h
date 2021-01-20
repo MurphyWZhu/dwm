@@ -82,6 +82,7 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, NULL };
 static const char *maimfullcmd[] = { "/home/murphy/.config/muscript/maimfull.sh", NULL };
 static const char *maimcmd[] = { "/home/murphy/.config/muscript/maim.sh", NULL };
+static const char *muchwpcmd[] = { "/home/murphy/.config/muscript/muchwallpaper.sh", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = roficmd } },
@@ -95,6 +96,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_a,      spawn,          {.v = lightup } },
 	{ MODKEY|ShiftMask,             XK_a,      spawn,          {.v = lightdown } },
 	{ MODKEY,                       XK_c,      spawn,          {.v = slockcmd } },
+	{ MODKEY,                       XK_w,      spawn,          {.v = muchwpcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
